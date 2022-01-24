@@ -27,6 +27,35 @@ html {
 }
 
 @media only screen and (min-width: 100px) {
+  /* Buttons */
+  .primary-btn,
+  .secondary-btn {
+    padding: 0.25vh 5vw;
+    border-radius: 5px;
+    border: none;
+    font-size: 2rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
+    transition: all 0.25s ease-in;
+  }
+
+  .primary-btn {
+    background-color: #045f63;
+    color: white;
+    text-shadow: 0px 0px 10px #324b4d;
+  }
+
+  .secondary-btn {
+    background-color: white;
+    color: #045f63;
+  }
+
+  .primary-btn:hover,
+  .secondary-btn:hover {
+    background-color: #324b4d;
+    color: white;
+  }
+
   /*   Navigation - Mobile     */
   .header {
     width: 100%;
@@ -68,6 +97,24 @@ html {
     flex-direction: row;
   }
 
+  .branding {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .branding h1 {
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .branding h1:hover {
+    color: #ccc;
+  }
+
   .header-active {
     background-color: #151515;
   }
@@ -77,19 +124,10 @@ html {
   }
 
   .burger {
-    margin-right: -10vh;
-  }
-
-  .branding h1 {
-    font-size: 2em;
-    letter-spacing: 2px;
-    color: white;
-    user-select: none;
-    cursor: pointer;
-  }
-
-  .branding h1:hover {
-    color: #ccc;
+    position: absolute;
+    right: 2.5vh;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .burger-1,
@@ -126,7 +164,7 @@ html {
     left: 0;
     width: 100%;
     height: 0vh;
-    background-color: #212121;
+    background-color: #151515;
     transition: all 0.5s ease;
     text-align: center;
   }
@@ -145,9 +183,9 @@ html {
   }
 
   .nav-list ul li {
-    font-family: "Bebas Neue", "Helvetica", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     letter-spacing: 2px;
-    font-size: 2em;
+    font-size: 1.5rem;
     opacity: 0;
     min-width: 50%;
     margin: 0 auto;
@@ -186,10 +224,80 @@ html {
     background-color: #324b4d;
     color: white;
   }
+
+  /* Landing Page */
+  .landing-page {
+    width: 100%;
+    height: 90vh;
+  }
+
+  .index-landing {
+    margin-top: -8vh;
+    background-image: url(/img/ben-biederman.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2.5vw;
+  }
+
+  .index-landing p,
+  .index-landing h2 {
+    text-shadow: 0px 0px 10px #151515;
+  }
+
+  .landing-hook {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 8vh;
+  }
+
+  .index-landing p {
+    color: white;
+    padding: 0 0.15rem;
+    font-size: 1rem;
+  }
+
+  .index-landing h2 {
+    font-size: 2.5rem;
+    color: white;
+  }
+
+  .index-landing .primary-btn {
+    margin-top: 5vh;
+    opacity: 0;
+    transition: none;
+  }
+}
+
+@media only screen and (min-width: 300px) {
+  /* Naviation */
+  .branding h1 {
+    font-size: 2.25rem;
+  }
+
+  .nav-list ul li {
+    font-size: 2rem;
+  }
+
+  /* Landing Page */
+  .index-landing p {
+    font-size: 1.25rem;
+  }
+
+  .index-landing h2 {
+    font-size: 3rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-  /*   Navigation - Tablet     */
+  /* Navigation */
   .header {
     justify-content: space-between;
   }
@@ -199,12 +307,12 @@ html {
   }
 
   .branding {
-    width: 25%;
+    width: auto;
     margin-left: 2.5vw;
   }
 
   .branding h1 {
-    font-size: 2.5em;
+    font-size: 2rem;
   }
 
   menu {
@@ -235,18 +343,43 @@ html {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 0px;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     opacity: 1;
     min-width: auto;
     margin: 0 1.25vw;
   }
+
+  /* Landing Page */
+  .landing-page {
+    height: 75vh;
+  }
+
+  .index-landing p {
+    padding: 0 0.2rem;
+    font-size: 1.5rem;
+  }
+
+  .index-landing h2 {
+    font-size: 3.5rem;
+  }
+
+  .index-landing .primary-btn {
+    margin-top: 2.5vh;
+  }
 }
 
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
+  /* Buttons */
+  .primary-btn,
+  .secondary-btn {
+    padding: 0.25vh 2.5vw;
+    font-size: 1.75rem;
+  }
+
   /*   Navigation - Desktop     */
   .branding {
     margin-left: 7.5vw;
-    width: 30%;
+    width: auto;
   }
 
   .branding h1 {
@@ -257,9 +390,26 @@ html {
     min-width: 30%;
     margin-right: 7.5vw;
   }
-
   .nav-list ul li {
-    font-size: 1em;
+    font-size: 1rem;
     margin: 0 0.5vw;
+  }
+
+  /* Landing Page */
+  .landing-page {
+    height: 100vh;
+  }
+
+  .index-landing p {
+    padding: 0 0.2rem;
+    font-size: 1.25rem;
+  }
+
+  .index-landing h2 {
+    font-size: 3rem;
+  }
+
+  .index-landing .primary-btn {
+    margin-top: 2.5vh;
   }
 }
