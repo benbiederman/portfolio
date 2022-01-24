@@ -225,6 +225,17 @@ html {
     color: white;
   }
 
+  /* Footer */
+  footer {
+    width: 100%;
+    min-height: 8vh;
+    background-color: #151515;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   /* Landing Page */
   .landing-page {
     width: 100%;

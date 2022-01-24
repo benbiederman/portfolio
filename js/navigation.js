@@ -1,3 +1,4 @@
+// Navigation
 const header = document.querySelector(".header");
 const logo = document.querySelector(".branding h1");
 const menuBtn = document.querySelector(".burger");
@@ -33,13 +34,21 @@ function createLink(link) {
 
   //  On link click, go to link location
   li.addEventListener("click", () => {
-    window.location = link.link;
+    if (link.focus) {
+      window.open(link.link);
+    } else {
+      window.location = link.link;
+    }
   });
 
   //  On link click, go to link location
   li.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
-      window.location = link.link;
+      if (link.focus) {
+        window.open(link.link);
+      } else {
+        window.location = link.link;
+      }
     }
   });
 
@@ -97,3 +106,10 @@ function navScroll() {
 }
 
 navScroll();
+
+// Footer
+const copyright = document.querySelector("footer p");
+
+const year = new Date().getFullYear();
+
+copyright.innerHTML = `&copy; ${year} Ben Biederman`;
