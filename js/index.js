@@ -1,6 +1,7 @@
 const landingPageP = document.querySelectorAll(".landing-hook p");
 const landingPageH2 = document.querySelector(".index-landing h2");
 const landingBtn = document.querySelector(".index-landing .primary-btn");
+const aboutBtn = document.querySelector(".about-information .primary-btn");
 
 // Animation timeline for Landing Page
 const tl = gsap.timeline({ defaults: { duration: 0.75, ease: "power3.out" } });
@@ -31,4 +32,9 @@ tl.fromTo(landingBtn, { opacity: 0, y: 10 }, { opacity: 1, y: 0 }, "<50%");
 // Landing page button
 landingBtn.addEventListener("click", () => {
   window.location = "portfolio.html";
+});
+
+// About Section
+aboutBtn.addEventListener("click", () => {
+  window.open("/docs/ben-biederman-resume.pdf");
 });

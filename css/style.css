@@ -5,7 +5,7 @@
 }
 
 main {
-  min-height: 190vh;
+  min-height: 90vh;
 }
 
 h1,
@@ -24,6 +24,14 @@ p {
 
 html {
   scroll-behavior: smooth;
+}
+
+img {
+  border-radius: 5px;
+}
+
+button {
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 100px) {
@@ -272,7 +280,6 @@ html {
   .index-landing p {
     color: white;
     padding: 0 0.15rem;
-    font-size: 1rem;
   }
 
   .index-landing h2 {
@@ -283,7 +290,51 @@ html {
   .index-landing .primary-btn {
     margin-top: 5vh;
     opacity: 0;
-    transition: none;
+    transition: background 0.5s ease;
+  }
+
+  /* About Section */
+  .about-section {
+    width: 100%;
+    outline: none;
+  }
+
+  .content-container {
+    width: 90%;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5vh auto;
+  }
+
+  .about-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about-information {
+    margin-top: 2.5vh;
+    text-align: center;
+  }
+
+  .about-information h3 {
+    font-size: 2rem;
+  }
+
+  .about-information p {
+    margin: 2.5vh auto;
+    text-align: left;
+    width: 95%;
+  }
+
+  .about-information button {
+    margin-top: 2.5vh;
   }
 }
 
@@ -305,9 +356,21 @@ html {
   .index-landing h2 {
     font-size: 3rem;
   }
+
+  /* About Section */
+  .about-information h3 {
+    font-size: 2.5rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
+  /* Buttons */
+  .primary-btn,
+  .secondary-btn {
+    padding: 0.25vh 2.5vw;
+    font-size: 1.75rem;
+  }
+
   /* Navigation */
   .header {
     justify-content: space-between;
@@ -354,7 +417,7 @@ html {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 0px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     opacity: 1;
     min-width: auto;
     margin: 0 1.25vw;
@@ -377,6 +440,25 @@ html {
   .index-landing .primary-btn {
     margin-top: 2.5vh;
   }
+
+  /* About Section */
+  .about-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5vh auto;
+  }
+
+  .about-container figure {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-information {
+    width: 40%;
+    margin: 0;
+  }
 }
 
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
@@ -384,7 +466,7 @@ html {
   .primary-btn,
   .secondary-btn {
     padding: 0.25vh 2.5vw;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   /*   Navigation - Desktop     */
@@ -406,6 +488,10 @@ html {
     margin: 0 0.5vw;
   }
 
+  .index-landing .primary-btn {
+    font-size: 1.75rem;
+  }
+
   /* Landing Page */
   .landing-page {
     height: 100vh;
@@ -422,5 +508,20 @@ html {
 
   .index-landing .primary-btn {
     margin-top: 2.5vh;
+  }
+
+  /* About Section */
+  .about-container {
+    justify-content: center;
+  }
+
+  .about-container figure {
+    width: 30%;
+    margin-right: 5%;
+  }
+
+  .about-information {
+    width: 35%;
+    margin-left: 5%;
   }
 }
