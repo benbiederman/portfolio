@@ -18,7 +18,8 @@ h6 {
   font-weight: 300;
 }
 
-p {
+p,
+li {
   font-family: "Roboto", sans-serif;
 }
 
@@ -150,7 +151,7 @@ button {
 
   .menu-active .burger-1 {
     transform: rotate(45deg);
-    background-color: #029199;
+    background-color: #045f63;
   }
 
   .menu-active .burger-2 {
@@ -159,7 +160,7 @@ button {
 
   .menu-active .burger-3 {
     transform: rotate(-45deg);
-    background-color: #029199;
+    background-color: #045f63;
   }
 
   .menu-active div {
@@ -297,6 +298,13 @@ button {
   .about-section {
     width: 100%;
     outline: none;
+    padding: 5vh 0;
+  }
+
+  .about-section,
+  .portfolio-section {
+    background-image: url(/img/funky-lines.png);
+    background-position: center;
   }
 
   .content-container {
@@ -308,11 +316,12 @@ button {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 5vh auto;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .about-container img {
-    width: 100%;
+    width: 95%;
     height: 100%;
     object-fit: cover;
     object-position: center;
@@ -335,6 +344,100 @@ button {
 
   .about-information button {
     margin-top: 2.5vh;
+  }
+
+  /* Portfolio */
+  .portfolio-section {
+    text-align: center;
+    outline: none;
+    min-height: 90vh;
+    padding: 2.5vh 0;
+  }
+
+  .portfolio-header {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .portfolio-header h2 {
+    font-size: 2rem;
+    margin-bottom: -1vh;
+  }
+
+  .project-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .project-container svg {
+    width: 90%;
+  }
+
+  .project {
+    width: 100%;
+    margin: 2.5vh auto;
+    color: #e8e8e8;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-bottom: 1.25vh;
+    transition: transform 0.5s ease;
+    background-image: url(/img/diagmonds.png);
+  }
+
+  .project:hover,
+  .project:focus {
+    box-shadow: 0px 0px 10px #000;
+    transform: scale(1.02);
+  }
+
+  .project:hover h3 {
+    color: #045f63;
+  }
+
+  .project-icons {
+    width: 100%;
+    text-align: right;
+  }
+
+  .project-icons img {
+    padding: 1vh 1vw;
+    cursor: pointer;
+    width: 10%;
+    transition: none;
+  }
+
+  .project-info {
+    min-height: 30vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .project h3 {
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    transition: color 0.25s ease;
+  }
+
+  .project p {
+    font-weight: 100;
+    width: 80%;
+    margin: 1.25vh auto 0 auto;
+  }
+
+  .project p:last-of-type {
+    margin: 5vh auto 0 auto;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #c9c9c9;
   }
 }
 
@@ -360,6 +463,19 @@ button {
   /* About Section */
   .about-information h3 {
     font-size: 2.5rem;
+  }
+
+  /* Portfolio */
+  .portfolio-header {
+    min-height: 10vh;
+  }
+
+  .portfolio-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .project h3 {
+    font-size: 2rem;
   }
 }
 
@@ -445,7 +561,6 @@ button {
   .about-container {
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 5vh auto;
   }
 
   .about-container figure {
@@ -458,6 +573,41 @@ button {
   .about-information {
     width: 40%;
     margin: 0;
+  }
+
+  /* Portfolio */
+  .project-container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .portfolio-header {
+    min-height: 5vh;
+    padding-bottom: 2.5vh;
+  }
+
+  .project-info {
+    min-height: 20vh;
+  }
+
+  .project {
+    width: 32%;
+    margin: 1.25vh 0.5%;
+  }
+
+  .project-icons img {
+    padding: 0.5vh 0.5vw;
+  }
+
+  .project h3 {
+    font-size: 1.5rem;
+  }
+
+  .project p:last-of-type {
+    margin: 2.5vh auto 0 auto;
   }
 }
 
@@ -523,5 +673,37 @@ button {
   .about-information {
     width: 35%;
     margin-left: 5%;
+  }
+
+  /* Portfolio */
+  .project {
+    width: 24%;
+    margin: 2.5vh 0.5%;
+    position: relative;
+  }
+
+  .project-icons {
+    outline: none;
+  }
+
+  .project-icons img {
+    margin-top: 0.5vh;
+    margin-right: 0.25vw;
+    padding: 0.5vh 0.2vw;
+    width: 8%;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+  }
+
+  .project:hover .project-icons img,
+  .project:focus .project-icons img,
+  .project-icons img:focus {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  .project p:last-of-type {
+    margin: 5vh auto 0 auto;
   }
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben Biederman | Portfolio</title>
+    <!-- Webpage Description -->
+    <meta
+      name="description"
+      content="Ben Biederman - An Award-winning leader, self-taught web developer, and coffee fiend."
+    />
+
+    <!-- Webpage Thumbnail -->
+    <meta
+      property="og:image"
+      content="http://www.benbiederman.com/img/thumbnail/default.jpg"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-72469480-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-72469480-1");
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <header class="header header-default">
+      <div class="branding">
+        <h1>Ben Biederman</h1>
+      </div>
+
+      <a class="skip-navigation" href="#main-content">Skip Navigation</a>
+
+      <div class="burger" tabindex="0">
+        <div class="burger-1"></div>
+        <div class="burger-2"></div>
+        <div class="burger-3"></div>
+      </div>
+
+      <menu>
+        <div class="nav-list">
+          <ul></ul>
+        </div>
+      </menu>
+    </header>
+    <main id="main-content">
+      <section class="portfolio-section" tabindex="0">
+        <div class="portfolio-header">
+          <h2>Some of my projects</h2>
+        </div>
+        <div class="container project-container"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p></p>
+    </footer>
+    <!-- GSAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- JavaScript -->
+    <script src="./js/navigation.js"></script>
+    <script src="./js/portfolio.js"></script>
+  </body>
+</html>
