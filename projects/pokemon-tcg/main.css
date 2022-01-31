@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Karla", sans-serif;
+}
+
+p, li, input {
+    font-family: "Raleway", sans-serif;
+}
+
+@media only screen and (min-width: 100px){
+    header{
+        min-height: 8vh;
+    }
+
+    footer {
+        min-height: 6vh;
+        font-size: .75em;
+        text-align: center;
+        padding: 0 10vw;
+        flex-direction: column;
+    }
+
+    footer p a {
+        color: #444444;
+        font-weight: bold;
+    }
+
+    header, footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #efefef;
+    }
+
+    header form {
+        width: 80%;
+        position: relative;
+    }
+
+    header input {
+        width: 100%;
+        min-height: 3rem;
+        padding-left: 2vw;
+        border: 1px solid #111;
+        border-radius: 5px 5px 5px 5px;
+        font-size: 1em;
+    }
+
+    header button {
+        width: 15%;
+        min-height: 3rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        background-color: transparent;
+        border-radius: 0 5px 5px 0;
+    }
+
+    header button img {
+        width: 50%;
+    }
+
+    main {
+        min-height: 86vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .display-card {
+        min-height: 42vh;
+        padding-bottom: 2vh;
+        background: url(/img/texture.jpg) center/cover;
+        background-blend-mode: normal;
+    }
+
+    .display {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    } 
+
+    .display img {
+        width: 65%;
+        margin: 2vh auto;
+        border-radius: 5px;
+    }
+
+    .previous, .next {
+        height: 45vh;
+        width: 15vw;
+        background-color: transparent;
+        border: none;
+        font-size: 1.5em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .card-info {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .card-info h2 {
+        text-transform: uppercase;
+    }
+
+    .shop-btn {
+        background-color: #111;
+        color: #fcfcfc;
+        margin-top: 2vh;
+        font-size: 1.25em;
+        padding: .25vh 1vw;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #efefef;
+    }
+
+    .thumbnail {
+        width: 15vw;
+        margin: 1vh 2.5vw;
+        cursor: pointer;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: grayscale(100);
+        border-radius: 5px;
+    }
+
+    .thumbnail-active img {
+        filter: grayscale(0);
+    }
+
+    .price {
+        margin-top: 2vh;
+        font-weight: 600;
+    }
+
+
+}
+
+@media only screen and (min-width: 728px){
+    header form {
+        width: 60%;
+    }
+
+    header input {
+        padding-left: 1.5vw;
+    }
+
+    .display img {
+        width: 40%;
+    }
+
+    .previous, .next {
+        height: 40vh;
+        width: 30vw;
+    }
+
+    .shop-btn {
+        font-size: 1em;
+        padding: .25vh 2vw;
+    }
+
+    .thumbnail {
+        width: 10vw;
+        margin: 1vh 2vw;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    header form {
+        width: 30%;
+    }
+
+    header input {
+        padding-left: 1vw;
+        min-height: 2.5rem;
+    }
+
+    header button {
+        width: 10%;
+        min-height: 2.5rem;
+    }
+
+    header button img {
+        width: 50%;
+    }
+
+    main {
+        min-height: 86vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .display-card {
+        min-height: 86vh;
+        width: 50%;
+        padding-bottom: 2vh;
+    }
+
+    .display img {
+        width: 35%;
+        margin: 2vh 0;
+    }
+
+    .previous, .next {
+        height: 35vh;
+        width: 5vw;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .previous:hover, .next:hover {
+        opacity: 1;
+    }
+    
+    .shop-btn {
+        margin-top: 3vh;
+    }
+
+    .card-list {
+        width: 50%;
+        height: 86vh;
+        align-items: flex-start;
+        justify-content: space-around;
+        overflow-y: scroll;
+    }
+
+    .thumbnail {
+        width: 7.5vw;
+        margin: 1vh .5vw;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: grayscale(100);
+    }
+
+    .thumbnail-active img {
+        filter: grayscale(0);
+    }
+}

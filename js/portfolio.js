@@ -10,10 +10,7 @@ class Project {
 
 const tGBG = new Project(
   `The Green Bay Guy`,
-  `It was popularised in the 1960s with the release of Letraset
-sheets containing Lorem Ipsum passages, and more recently with
-desktop publishing software like Aldus PageMaker including
-versions of Lorem Ipsum.`,
+  `This started as a side hustle of mine, which quickly opened up my passion for web development. I built this website to assist others who are coming to Green Bay find the best places to eat, drink, and see while they’re in town.`,
   `HTML, CSS, JS`,
   `https://github.com/benbiederman`,
   `https://thegreenbayguy.com/`
@@ -21,47 +18,37 @@ versions of Lorem Ipsum.`,
 
 const budgetApp = new Project(
   `Budget Application`,
-  `It was popularised in the 1960s with the release of Letraset
-sheets containing. It was popularised in the 1960s with the release of Letraset
-sheets containing Lorem Ipsum passages, and more recently with
-desktop publishing software like Aldus PageMaker including
-versions of Lorem Ipsum.`,
+  `Each year I have a spreadsheet for my personal finances, this year I decided to build a desktop application as a way of manage my expenses instead of the spreadsheet. It allowed me to put my React knowledge to work.`,
   `React.js, CSS`,
-  `#`,
-  `#`
+  `https://github.com/benbiederman/budget-application`,
+  `../projects/budget-application/index.html`
 );
 
 const findAPhoto = new Project(
   `Find-A-Photo`,
-  `It was popularised in the 1960s with the release of Letraset
-sheets containing Lorem Ipsum passages, and more recently with
-desktop publishing software like Aldus PageMaker`,
+  `I built this project to get some exposure working with APIs. I really enjoy using Pexels to help find photos for websites or other use, seemed only appropriate to make a photo finder using Pexels API.`,
   `HTML, CSS, JS, Pexels API`,
-  `#`,
-  `#`
+  `https://github.com/benbiederman/find-a-photo`,
+  `../projects/find-a-photo/index.html`
 );
 
 const PokemonTCG = new Project(
   `Pokemon TCG`,
-  `It was popularised in the 1960s with the release of Letraset
-  sheets containing. It was popularised in the 1960s with the release of Letraset
-  sheets containing`,
-  `HTML, CSS, JS, PokeAPI`,
-  `#`,
-  `#`
+  `This project was made by the request of a friend. He wanted a way to search for every Pokemon card made of a Pokemon. I was able to use the Pokemon TCG API to help with this project.`,
+  `HTML, CSS, JS, Pokemon TCG API`,
+  `https://github.com/benbiederman/pokemon-tcg`,
+  `../projects/pokemon-tcg/index.html`
 );
 
 const personalWebsite = new Project(
   `Personal Website`,
-  `It was popularised in the 1960s with the release of Letraset
-  sheets containing. It was popularised in the 1960s with the release of Letraset
-  sheets containing`,
+  `This is the website you’re currently browsing. I built this to showcase everything I’ve been working towards during my journey of learning web development.`,
   `HTML, CSS, JS`,
-  `#`,
-  `#`
+  `https://github.com/benbiederman/portfolio`,
+  `index.html`
 );
 
-const projects = [tGBG, budgetApp, findAPhoto, PokemonTCG, personalWebsite];
+const projects = [tGBG, budgetApp, PokemonTCG, findAPhoto, personalWebsite];
 
 projects.forEach((p) => {
   buildProject(p.name, p.description, p.stack, p.github, p.link);
